@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Quản lý phòng</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/manage.css" />
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="navbar-brand">
+                    <a href="index.html">Trang chủ</a>
+                    <a href="#">Đăng ký phòng</a>
+                    <a href="index.html">Quán lý User</a>
+                    <a href="index.html" class="active">Quản lý phòng</a>
+                    <a href="index.html">Duyệt đặt phòng</a>
+                    <a href="login.html">Đăng Xuất</a>
+                </div>
+            </div>
+            <div class="container">
+                <br><br><br>
+                <div class="row" id="table">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <h1>Quản lý phòng</h1>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                            </div>
+                            <div class="col-md-4">
+                                <select class="dropdown">
+                                    <option value="id">Id</option>
+                                    <option value="name">Tên</option>
+                                    <option value="address">Vị trí</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br><br>
+                    </div>              
+                    <div class="col-md-12">
+                        <table class="table-striped table-hover">
+                            <tr>
+                                <th>Id</th>
+                                <th>Tên</th>
+                                <th>Vị trí</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#">1</a></th>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" name="save_login" value="0" ></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#">2</a></th>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" name="save_login" value="0" ></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#">3</a></th>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" name="save_login" value="0" ></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-primary">Thêm</button>
+                        <button type="button" class="btn btn-primary">Sửa</button>
+                        <button type="button" class="btn btn-danger">Xóa</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery-1.12.4.min.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js" ></script>
+    </body>
+</html>
