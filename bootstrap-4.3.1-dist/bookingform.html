@@ -9,7 +9,7 @@
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/manage.css" />
+        <link rel="stylesheet" href="css/formbooking.css" />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,52 +34,38 @@
             </div>
             <div class="container">
                 <br><br><br>
-                <div class="row" id="table">
+                <div class="row" id="bookingform">
                     <div class="col-md-12">
                         <div class="row">
                             <h1>Đăng ký phòng</h1>
                         </div>
                         <br><br>
-                        <div><button type="button" class="btn btn-primary">Xem lịch đã đặt</button></div>
-                        <br><br>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                        <form method="POST" name="frm_booking">
+                            <div class="form-group">
+                                <label for="labname">Tên phòng:</label>
+                                <input type="text" class="form-control" id="labname" value="Tên phòng" disabled>
                             </div>
-                            <div class="col-md-4">
-                                <select class="dropdown">
-                                    <option value="id">Id</option>
-                                    <option value="name">Tên</option>
-                                    <option value="address">Vị trí</option>
-                                </select>
+                            <div class="form-group">
+                                <label for="username">Người đặt:</label>
+                                <input type="text" class="form-control" id="username" value="Người đặt" disabled>
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label for="classname">Lớp được đặt:</label>
+                                <input type="text" class="form-control" id="classname" placeholder="Lớp được đặt">
+                            </div>
+                            <div class="form-group">
+                                <label for="timebegin">Thời gian bắt đầu:</label>
+                                <input type="datetime-local" class="form-control" id="timebegin">
+                            </div>
+                            <div class="form-group">
+                                <label for="timeend">Thời gian kết thúc:</label>
+                                <input type="datetime-local" class="form-control" id="timeend">
+                            </div>
+                            <input class="btn btn-primary" type="submit" value="Đăng ký"/>
+                            <input type="reset" class="btn btn-default" value="Đặt lại"/>
+                        </form>
                         <br><br>
                     </div>              
-                    <div class="col-md-12">
-                        <table class="table-striped table-hover">
-                            <tr>
-                                <th>Id</th>
-                                <th>Tên</th>
-                                <th>Vị trí</th>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#">1</a></th>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#">2</a></th>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#">3</a></th>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </table>
-                    </div>
                 </div>
             </div>
         </div>

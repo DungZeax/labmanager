@@ -5,11 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Đăng ký phòng</title>
+        <title>Trang chủ</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/manage.css" />
+        <link rel="stylesheet" href="css/index.css" />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,14 +22,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="navbar-brand">
-                    <a href="index.html">Trang chủ</a>
-                    <a href="#">Thông tin cá nhân</a>
-                    <a href="#" class="active">Đăng ký phòng</a>
-                    <a href="index.html">Quán lý User</a>
-                    <a href="index.html">Quản lý phòng</a>
-                    <a href="index.html">Duyệt đặt phòng</a>
-                    <a href="#">Quản lý đặt phòng</a>
-                    <a href="login.html">Đăng Xuất</a>
+                    <a href="index.html" class="active">Trang chủ</a>
+                    <a href="login.html">Đăng Nhập</a>
                 </div>
             </div>
             <div class="container">
@@ -37,10 +31,8 @@
                 <div class="row" id="table">
                     <div class="col-md-12">
                         <div class="row">
-                            <h1>Đăng ký phòng</h1>
+                            <h1>Danh sách phòng Lab</h1>
                         </div>
-                        <br><br>
-                        <div><button type="button" class="btn btn-primary">Xem lịch đã đặt</button></div>
                         <br><br>
                         <div class="row">
                             <div class="col-md-8">
@@ -49,8 +41,10 @@
                             <div class="col-md-4">
                                 <select class="dropdown">
                                     <option value="id">Id</option>
-                                    <option value="name">Tên</option>
-                                    <option value="address">Vị trí</option>
+                                    <option value="name">Tên phòng</option>
+                                    <option value="user">Người đặt</option>
+                                    <option value="class">Lớp được đặt</option>
+                                    <option value="time_begin">Thời gian bắt đầu</option>
                                 </select>
                             </div>
                         </div>
@@ -60,21 +54,37 @@
                         <table class="table-striped table-hover">
                             <tr>
                                 <th>Id</th>
-                                <th>Tên</th>
+                                <th>Tên phòng</th>
                                 <th>Vị trí</th>
+                                <th>Người đặt</th>
+                                <th>Lớp được đặt</th>
+                                <th>Thời gian bắt đầu</th>
+                                <th>Thời gian kết thúc</th>
                             </tr>
                             <tr>
-                                <th scope="row"><a href="#">1</a></th>
+                                <th scope="row">1</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <th scope="row"><a href="#">2</a></th>
+                                <th scope="row">2</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <th scope="row"><a href="#">3</a></th>
+                                <th scope="row">3</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>

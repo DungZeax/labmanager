@@ -25,6 +25,19 @@
 .container{
     width: 80%;
 }
+#tieude{
+    text-align: center;
+}
+#tieude h1{
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+#tieude button{
+    height: 50px;
+    width: 150px;
+    float: right;
+}
 #table{
     text-align: center;
 }
@@ -44,7 +57,11 @@
 #table th,td{
     padding: 15px 15px;
 }
+
+#table th{
+    width: 600px;
+}
 #table button{
-    height: 40px;
-    width: 150px;
+    height: 20%px;
+    width: 40%;
 }
