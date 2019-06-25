@@ -5,11 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Quản lý nhân viên</title>
+        <title>Quản lý user</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/manage.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,65 +35,133 @@
             </div>
             <div class="container">
                 <br><br><br>
-                <div class="row" id="table">
+                <div class="row" id="tieude">
                     <div class="col-md-12">
                         <div class="row">
-                            <h1>Quản lý User</h1>
+                            <h1 style="color:#3b5998">Quản lý user</h1>
                         </div>
                         <br><br>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                            </div>
-                            <div class="col-md-4">
-                                <select class="dropdown">
-                                    <option value="id">Id</option>
-                                    <option value="name">Tên</option>
-                                    <option value="role">Chức vụ</option>
-                                </select>
-                            </div>
-                        </div>
-                        <br><br>
-                    </div>              
+                    </div>
                     <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <form>
+                                    <input type="text" class="form-control" placeholder="Tên"/>
+                                    <input type="text" class="form-control" placeholder="Chức vụ"/>
+                                    <input type="text" class="form-control" placeholder="Người thêm"/>
+                                    <button type="submit" class="btn btn-info"><i class="fa fa-search"></i>Tìm kiếm</button>
+                                </form>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addform">Thêm</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12" id="table">
                         <table class="table-striped table-hover">
                             <tr>
                                 <th>Id</th>
                                 <th>Tên</th>
                                 <th>Chức vụ</th>
-                                <th></th>
+                                <th>Phân quyền</th>
+                                <th>Ngày thêm</th>
+                                <th>Người thêm</th>
+                                <th>Chức năng</th>
                             </tr>
                             <tr>
                                 <th scope="row">1</th>
                                 <td></td>
                                 <td></td>
-                                <td><input type="checkbox" value="0" ></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <button class="btn btn-primary">Sửa</button>
+                                    <button class="btn btn-danger">Xóa</button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
                                 <td></td>
                                 <td></td>
-                                <td><input type="checkbox" value="0" ></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <button class="btn btn-primary">Sửa</button>
+                                    <button class="btn btn-danger">Xóa</button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
                                 <td></td>
                                 <td></td>
-                                <td><input type="checkbox" value="0" ></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <button class="btn btn-primary">Sửa</button>
+                                    <button class="btn btn-danger">Xóa</button>
+                                </td>
                             </tr>
                         </table>
-                    </div>
-                    <div class="col-md-6"></div>
-                    <div class="col-md-6">
-                        <button type="button" class="btn btn-primary">Thêm</button>
-                        <button type="button" class="btn btn-primary">Sửa</button>
-                        <button type="button" class="btn btn-danger">Xóa</button>
                     </div>
                 </div>
             </div>
         </div>
-
-
+        <div class="modal fade" id="addform" tabindex="-1" role="dialog" aria-labelledby="addformLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Thêm người dùng</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <form method="POST" name="addDevice">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="labname">Tên người dùng:</label>
+                                <input type="text" class="form-control" id="labname" placeholder="Tên người dùng">
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Người thêm:</label>
+                                <input type="text" class="form-control" id="username" value="Người thêm" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="optradio">Phân quyền:</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" id="optradio" value="1" checked>Giáo viên
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" id="optradio" value="2">Admin
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="classname">Chức vụ:</label>
+                                <select class="dropdown" id="cbbPosition">
+                                    <option value="1">Giáo viên</option>
+                                    <option value="2">Phó/Trưởng bộ môn</option>
+                                    <option value="3">Phó/Trưởng khoa</option>
+                                    <option value="4">Hiệu phó/trưởng</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="timebegin">Ngày thêm:</label>
+                                <p id="date"></p>
+                                <script>
+                                    var dt = new Date();
+                                    document.getElementById("date").innerHTML = (("0" + dt.getDate()).slice(-2)) + "." + (("0" + (dt.getMonth() + 1)).slice(-2)) + "." + (dt.getFullYear());
+                                </script>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/jquery-1.12.4.min.js" ></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->

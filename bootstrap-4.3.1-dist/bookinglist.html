@@ -10,6 +10,7 @@
         <!-- Bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,75 +34,292 @@
                 </div>
             </div>
             <div class="container">
-                <br><br><br>
-                <div class="row" id="table">
+                <br>
+                <div class="row" id="tieude">
                     <div class="col-md-12">
                         <div class="row">
-                            <h1>Danh sách đăng ký phòng</h1>
+                            <h1 style="color:#3b5998">Danh sách đăng ký phòng</h1>
                         </div>
                         <br><br>
                         <div class="row">
-                            <div class="col-md-8">
-                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                            </div>
-                            <div class="col-md-4">
-                                <select class="dropdown">
-                                    <option value="id">Id</option>
-                                    <option value="name">Tên phòng</option>
-                                    <option value="user">Người đặt</option>
-                                    <option value="class">Lớp được đặt</option>
-                                    <option value="time_begin">Thời gian bắt đầu</option>
+                            <form>
+                                <select class="dropdown" id="month">
+                                    <option value="null"></option>
+                                    <option value="1">Tháng 1</option>
+                                    <option value="2">Tháng 2</option>
+                                    <option value="3">Tháng 3</option>
+                                    <option value="4">Tháng 4</option>
+                                    <option value="5">Tháng 5</option>
+                                    <option value="6">Tháng 6</option>
+                                    <option value="7">Tháng 7</option>
+                                    <option value="8">Tháng 8</option>
+                                    <option value="9">Tháng 9</option>
+                                    <option value="10">Tháng 10</option>
+                                    <option value="11">Tháng 11</option>
+                                    <option value="12">Tháng 12</option>
                                 </select>
-                            </div>
+                                <select class="dropdown" id="week">
+                                    <option value="null"></option>
+                                    <option value="1">Tuần 1</option>
+                                    <option value="2">Tuần 2</option>
+                                    <option value="3">Tuần 3</option>
+                                    <option value="4">Tuần 4</option>
+                                    <option value="5">Tuần 5</option>
+                                </select>
+                                <button type="submit" class="btn btn-info"><i class="fa fa-search"></i>Tìm kiếm</button>
+                            </form>
                         </div>
                         <br><br>
                     </div>              
-                    <div class="col-md-12">
-                        <table class="table-striped table-hover">
+                </div>
+            </div>
+            <div class="col-md-12" id="table">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <table class="table-bordered hover">
                             <tr>
-                                <th>Id</th>
-                                <th>Tên phòng</th>
-                                <th>Người đặt</th>
-                                <th>Lớp được đặt</th>
-                                <th>Thời gian bắt đầu</th>
-                                <th>Thời gian kết thúc</th>
-                                <th></th>
+                                <th colspan="2">Phòng</th>
+                                <th>P001</th>
+                                <th>P002</th>
+                                <th>P003</th>
+                                <th>P004</th>
+                                <th>P005</th>
+                                <th>P006</th>
                             </tr>
                             <tr>
-                                <th scope="row">1</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <button type="button" class="btn btn-danger">Hủy</button>
-                                </td>
+                                <th rowspan="4">Thứ 2</th>                  
+                                <th>Ca 1 - Sáng</th>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 1 - Sáng</a></td>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 1 - Sáng</a></td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <button type="button" class="btn btn-danger">Hủy</button>
-                                </td>
+                                <th>Ca 2 - Sáng</th>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 2 - Sáng</a></td>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 2 - Sáng</a></td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                            </tr>                                                 
+                            <tr>
+                                <th>Ca 1 - Chiều</th>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
                             </tr>
                             <tr>
-                                <th scope="row">3</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <button type="button" class="btn btn-danger">Hủy</button>
-                                </td>
+                                <th>Ca 2 - Chiều</th>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                            </tr>                           
+                            <tr>
+                                <th rowspan="4">Thứ 3</th>                  
+                                <th>Ca 1 - Sáng</th>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 1 - Sáng</a></td>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 1 - Sáng</a></td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                            </tr>
+                            <tr>
+                                <th>Ca 2 - Sáng</th>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 2 - Sáng</a></td>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 2 - Sáng</a></td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                            </tr>                                                 
+                            <tr>
+                                <th>Ca 1 - Chiều</th>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                            </tr>
+                            <tr>
+                                <th>Ca 2 - Chiều</th>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="4">Thứ 4</th>                  
+                                <th>Ca 1 - Sáng</th>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 1 - Sáng</a></td>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 1 - Sáng</a></td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                            </tr>
+                            <tr>
+                                <th>Ca 2 - Sáng</th>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 2 - Sáng</a></td>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 2 - Sáng</a></td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                            </tr>                                                 
+                            <tr>
+                                <th>Ca 1 - Chiều</th>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                            </tr>
+                            <tr>
+                                <th>Ca 2 - Chiều</th>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="4">Thứ 5</th>                  
+                                <th>Ca 1 - Sáng</th>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 1 - Sáng</a></td>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 1 - Sáng</a></td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                            </tr>
+                            <tr>
+                                <th>Ca 2 - Sáng</th>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 2 - Sáng</a></td>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 2 - Sáng</a></td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                            </tr>                                                 
+                            <tr>
+                                <th>Ca 1 - Chiều</th>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                            </tr>
+                            <tr>
+                                <th>Ca 2 - Chiều</th>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="4">Thứ 6</th>                  
+                                <th>Ca 1 - Sáng</th>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 1 - Sáng</a></td>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 1 - Sáng</a></td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                            </tr>
+                            <tr>
+                                <th>Ca 2 - Sáng</th>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 2 - Sáng</a></td>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 2 - Sáng</a></td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                            </tr>                                                 
+                            <tr>
+                                <th>Ca 1 - Chiều</th>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                            </tr>
+                            <tr>
+                                <th>Ca 2 - Chiều</th>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="4">Thứ 7</th>                  
+                                <th>Ca 1 - Sáng</th>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 1 - Sáng</a></td>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 1 - Sáng</a></td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                                <td>Ca 1 - Sáng</td>
+                            </tr>
+                            <tr>
+                                <th>Ca 2 - Sáng</th>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 2 - Sáng</a></td>
+                                <td><a data-toggle="modal" data-target="#addform">Ca 2 - Sáng</a></td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                                <td>Ca 2 - Sáng</td>
+                            </tr>                                                 
+                            <tr>
+                                <th>Ca 1 - Chiều</th>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                                <td>Ca 1 - Chiều</td>
+                            </tr>
+                            <tr>
+                                <th>Ca 2 - Chiều</th>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
+                                <td>Ca 2 - Chiều</td>
                             </tr>
                         </table>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-info"><-Tuần trước</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-info">Tuần sau-></button>
+                            </div>
+                        </div>                        
                     </div>
+                    <div class="col-md-1"></div>
                 </div>
             </div>
         </div>

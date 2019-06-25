@@ -10,6 +10,7 @@
         <!-- Bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/manage.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,12 +38,23 @@
                 <div class="row" id="tieude">
                     <div class="col-md-12">
                         <div class="row">
-                            <h1>Quản lý thiết bị</h1>
+                            <h1 style="color:#3b5998">Quản lý thiết bị</h1>
                         </div>
                         <br><br>
                     </div>
                     <div class="col-md-12">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addform">Thêm</button>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <form>
+                                    <input type="text" class="form-control" placeholder="Tên"/>
+                                    <input type="text" class="form-control" placeholder="Người thêm"/>
+                                    <button type="submit" class="btn btn-info"><i class="fa fa-search"></i>Tìm kiếm</button>
+                                </form>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addform">Thêm</button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-md-12" id="table">
@@ -67,7 +79,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">1</th>
+                                <th scope="row">2</th>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -78,7 +90,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">1</th>
+                                <th scope="row">3</th>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -97,14 +109,14 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">Thêm thiết bị</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <form method="POST" name="addDevice">
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="labname">Tên thiết bị:</label>
-                                <input type="text" class="form-control" id="labname" value="Tên thiết bị">
+                                <input type="text" class="form-control" id="labname" placeholder="Tên thiết bị">
                             </div>
                             <div class="form-group">
                                 <label for="username">Người thêm:</label>
@@ -118,7 +130,8 @@
                                 <label for="timebegin">Ngày thêm:</label>
                                 <p id="date"></p>
                                 <script>
-                                    document.getElementById("date").innerHTML = Date();
+                                    var dt = new Date();
+                                    document.getElementById("date").innerHTML = (("0" + dt.getDate()).slice(-2)) + "." + (("0" + (dt.getMonth() + 1)).slice(-2)) + "." + (dt.getFullYear());
                                 </script>
                             </div>
                         </div>
@@ -130,8 +143,6 @@
                 </div>
             </div>
         </div>
-
-
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/jquery-1.12.4.min.js" ></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
