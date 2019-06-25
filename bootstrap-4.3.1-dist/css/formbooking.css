@@ -1,7 +1,7 @@
 .navbar-brand{
     display: block;
     overflow: hidden;
-    background-color: #333;
+    background-color: #3b5998;
 }
 .navbar-brand a {
   float: left;
@@ -10,7 +10,7 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  background-color: #333;
+  background-color: #3b5998;
 }
 
 .navbar-brand a:hover {
